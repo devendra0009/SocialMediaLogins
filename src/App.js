@@ -1,17 +1,17 @@
 import "./App.css";
 import { ContextHolder } from "@frontegg/rest-api";
 import { AdminPortal, useAuth, useLoginWithRedirect } from "@frontegg/react";
-import { useEffect } from "react";
+// import { useEffect } from "react";
 
 function App() {
   const { user, isAuthenticated } = useAuth();
   const loginWithRedirect = useLoginWithRedirect();
 
-  useEffect(() => {
-    if (!isAuthenticated) {
-  loginWithRedirect();
-    }
-  }, [isAuthenticated, loginWithRedirect]);
+  // useEffect(() => {
+  //   if (!isAuthenticated) {
+  // loginWithRedirect();
+  //   }
+  // }, [isAuthenticated, loginWithRedirect]);
 
   const logout = () => {
     const baseUrl = ContextHolder.getContext().baseUrl;
